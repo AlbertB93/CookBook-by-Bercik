@@ -1,43 +1,45 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  max-height: 100vh;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 h1,
 h2 {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 h1 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 h2 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 h3 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
+  color: var(--color-text-main);
+  cursor: pointer;
 }
 
 body {
-
-    background-color: var(--color-theme-main);
-    color: var(--color-text-main);
+  background-color: var(--color-theme-main);
+  color: var(--color-text-main);
 }
 
 #root {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
 }

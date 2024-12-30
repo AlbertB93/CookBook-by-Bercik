@@ -1,0 +1,5 @@
+.mainContent {
+  /*   background: linear-gradient(15deg, #274285, #010101); */
+  flex: 1;
+  width: 100%;
+}

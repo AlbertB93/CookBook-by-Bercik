@@ -1,10 +1,15 @@
+import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
+import { RecipeMainPage } from "../../components/RecipeMainPage/RecipeMainPage";
 import styles from "./MainPage.module.css";
-import { CenteredComponent } from "../../components/CenteredContent/CenteredContent";
 
 export function MainPage() {
   return (
-    <CenteredComponent>
-      <div className={styles.mainPage}> środek</div>
-    </CenteredComponent>
+    <ContentWrapper>
+      <div className={styles.mainPage}>
+        <RecipeMainPage></RecipeMainPage>
+        <RecipeMainPage></RecipeMainPage>
+        <RecipeMainPage></RecipeMainPage>
+      </div>
+    </ContentWrapper>
   );
 }

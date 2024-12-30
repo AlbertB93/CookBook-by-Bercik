@@ -1,0 +1,40 @@
+.recipeMainPage {
+  align-items: center;
+  border: solid 1px var(--color-border);
+  box-shadow: 2px -2px 2px var(--color-border);
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  justify-content: space-around;
+  width: 320px;
+}
+
+.small {
+  border: solid 1px var(--color-border);
+  box-shadow: 2px -2px 2px var(--color-border);
+  height: 320px;
+  width: 260px;
+}
+
+.buttons {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+}
+
+.image {
+  height: 80px;
+  width: 80px;
+}
+
+.values {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 8px;
+  width: 80%;
+}
+.value {
+  padding: 0 4px;
+}

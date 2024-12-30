@@ -1,0 +1,8 @@
+.dailyMenuButton {
+  background: none;
+  border: solid 1px var(--color-border);
+  box-shadow: 1px -1px 1px var(--color-border);
+  color: var(--color-text-main);
+  height: 30px;
+  padding: 4px;
+}
