@@ -1,0 +1,6 @@
+.logoIcon {
+    /*     background-color: var(--color-border); */
+    border-radius: 12px;
+    height: 60px;
+    width: 60px;
+}

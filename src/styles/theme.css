@@ -1,0 +1,11 @@
+body {
+    --font-size-default: 16px;
+    --font-family-default: Helvetica, Arial, sens-serif;
+
+
+    --color-theme-main: rgb(26, 25, 25);
+    --color-border: rgb(11, 11, 117);
+    --color-text-main: rgb(239, 233, 233);
+
+
+}
