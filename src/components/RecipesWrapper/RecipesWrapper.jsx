@@ -1,19 +1,26 @@
 import styles from "./RecipesWrapper.module.css";
-import { useGetData } from "./../../hooks/useGetData";
+import { DBTESTDISHES } from "../../constants/dbtestdishes";
+import { RecipeAllRecipes } from "../RecipeAllRecipes/RecipeAllRecipes";
 
 export function RecipesWrapper() {
-  const {
-    data: dishes,
-    setData: setDishes,
-    setError,
-  } = useGetData("/db/dishes.json");
-
   /* użyć useEffect? */
 
   return (
     <div className={styles.recipesWrapper}>
-      Recipes Wrapper
-      {console.log("Obiekt:" + dishes[0])}
+      {DBTESTDISHES.map((dish) => (
+        <RecipeAllRecipes
+          key={dish.id}
+          id={dish.id}
+          title={dish.title}
+          imgUrl={dish.imageState}
+          kcal={dish.kcal}
+          fats={dish.fats}
+          carbons={dish.carbons}
+          proteins={dish.proteins}
+          ingredients={dish.ingredients}
+          description={dish.description}
+        />
+      ))}
     </div>
   );
 }

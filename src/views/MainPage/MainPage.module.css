@@ -1,6 +1,8 @@
 .mainPage {
+align-items: center;
   display: flex;
   flex-direction: row;
+  height: 70vh;
   justify-content: space-between;
   margin: 1rem;
   margin-top: 2rem;

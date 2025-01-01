@@ -28,8 +28,12 @@ h3 {
 
 a {
   text-decoration: none;
-  color: var(--color-text-main);
-  cursor: pointer;
+  color: var(--color-text-white);
+    cursor: pointer;
+  }
+  
+  a:hover {
+    color: var(--color-text-main);
 }
 
 body {

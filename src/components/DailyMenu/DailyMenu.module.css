@@ -14,7 +14,7 @@
 
 .imgContainer {
   background-color: var(--color-theme-main);
-  border: solid 4px var(--color-border);
+  border: solid 4px var(--color-border-white);
   border-radius: 90px;
   display: flex;
   height: 120px;
@@ -34,5 +34,6 @@
 }
 
 p {
+  color: var(--color-text-white);
   font-size: 0.75rem;
 }

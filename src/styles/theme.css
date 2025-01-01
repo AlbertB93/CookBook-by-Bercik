@@ -2,7 +2,10 @@ body {
   --font-size-default: 16px;
   --font-family-default: Helvetica, Arial, sens-serif;
 
-  --color-theme-main: rgb(36, 30, 30);
-  --color-border: rgb(59, 59, 195);
-  --color-text-main: rgb(239, 237, 233);
+  --color-theme-main: rgb(32, 30, 30);
+    --color-border: rgb(77, 74, 74);
+    --color-border-white: rgb(238, 229, 229);
+    --color-border-gold: rgb(255, 200, 0);
+    --color-text-main: rgb(255, 200, 0);
+    --color-text-white: rgb(238, 229, 229);
 }
