@@ -1,7 +1,8 @@
-import { Layout } from "./components/Layout/Layout";
+import { AllRecipes } from "./views/AllRecipes/AllRecipes";
+import { MainPage } from "./views/MainPage/MainPage";
 
 function App() {
-  return <Layout />;
+  return <AllRecipes />;
 }
 
 export default App;

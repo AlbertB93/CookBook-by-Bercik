@@ -1,5 +1,18 @@
+.recipesWrapper::-webkit-scrollbar {
+  background-color: rgb(52, 50, 50);
+  border-radius: 12px;
+  width: 8px;
+}
+
+.recipesWrapper::-webkit-scrollbar-thumb {
+  background-color: var(--color-text-main);
+  border-radius: 12px;
+}
 .recipesWrapper {
-  border: solid 1px white;
+  display: flex;
+    flex-wrap: wrap;
   height: 400px;
-  width: 800px;
+  justify-content: center;
+    width: 680px;
+    overflow-y: scroll;
 }

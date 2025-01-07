@@ -7,14 +7,14 @@ import { MainContent } from "../MainContent/MainContent";
 import { MainMenu } from "../MainMenu/MainMenu";
 import { TopBar } from "../TopBar/TopBar";
 
-export function Layout() {
+export function Layout({ children }) {
   return (
     <>
       <MainContent>
         <TopBar></TopBar>
         <MainMenu></MainMenu>
-        <AllRecipes></AllRecipes>
         <DailyMenu></DailyMenu>
+        {children}
       </MainContent>
       <Footer></Footer>
     </>
