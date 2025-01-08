@@ -1,4 +1,5 @@
 .contentWrapper {
   min-height: 70vh;
   width: 80%;
+  max-width: 100rem;
 }

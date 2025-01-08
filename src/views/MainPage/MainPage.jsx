@@ -1,5 +1,4 @@
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
-import { Layout } from "../../components/Layout/Layout";
 import { RecipeMainPage } from "../../components/RecipeMainPage/RecipeMainPage";
 import styles from "./MainPage.module.css";
 
@@ -100,25 +99,23 @@ export function MainPage() {
   ];
 
   return (
-    <Layout>
-      <ContentWrapper>
-        <div className={styles.mainPage}>
-          {TESTDISHEHSMAIN.map((dish) => (
-            <RecipeMainPage
-              key={dish.id}
-              id={dish.id}
-              title={dish.title}
-              imgUrl={dish.imageState}
-              kcal={dish.kcal}
-              fats={dish.fats}
-              carbons={dish.carbons}
-              proteins={dish.proteins}
-              ingredients={dish.ingredients}
-              description={dish.description}
-            />
-          ))}
-        </div>
-      </ContentWrapper>
-    </Layout>
+    <ContentWrapper>
+      <div className={styles.mainPage}>
+        {TESTDISHEHSMAIN.map((dish) => (
+          <RecipeMainPage
+            key={dish.id}
+            id={dish.id}
+            title={dish.title}
+            imgUrl={dish.imageState}
+            kcal={dish.kcal}
+            fats={dish.fats}
+            carbons={dish.carbons}
+            proteins={dish.proteins}
+            ingredients={dish.ingredients}
+            description={dish.description}
+          />
+        ))}
+      </div>
+    </ContentWrapper>
   );
 }

@@ -1,4 +1,4 @@
-import { ButtonSimple } from "../ButtonSimple/ButtonSimple";
+import { ButtonSmall } from "../ButtonSmall/ButtonSmall";
 import styles from "./RecipeAllRecipes.module.css";
 
 export function RecipeAllRecipes({
@@ -18,8 +18,8 @@ export function RecipeAllRecipes({
         {kcal} kcal. T: {fats}g. W: {carbons}g. B: {proteins} g.
       </p>
       <div className={styles.buttons}>
-        <ButtonSimple>Pokaż przepis</ButtonSimple>
-        <ButtonSimple>Dodaj</ButtonSimple>
+        <ButtonSmall>Pokaż przepis</ButtonSmall>
+        <ButtonSmall>Dodaj</ButtonSmall>
       </div>
     </div>
   );

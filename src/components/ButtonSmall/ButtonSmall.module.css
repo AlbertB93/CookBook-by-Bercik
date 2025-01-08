@@ -1,9 +1,8 @@
-.buttonSimple {
+.buttonSmall {
   background: none;
   border: solid 1px var(--color-border-gold);
-  box-shadow: 1px -1px 1px var(--color-border);
   color: var(--color-text-main);
   cursor: pointer;
-  height: 30px;
+  font-size: 0.75rem;
   padding: 4px;
 }

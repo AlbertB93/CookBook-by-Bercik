@@ -1,14 +1,14 @@
 export const MENUOPTIONS = [
   {
     optionName: "Skomponuj swój posiłek",
-    path: "createMeal",
+    path: "/kompozycja",
   },
   {
-    optionName: "Wyświetl przepisy",
-    path: "showRecipes",
+    optionName: "Wszystkie przepisy",
+    path: "/przepisy",
   },
   {
-    optionName: "Pokaż jadłospis",
-    path: "showDailyMenu",
+    optionName: "O stronie",
+    path: "/o-stronie",
   },
 ];
