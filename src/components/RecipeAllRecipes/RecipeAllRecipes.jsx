@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ButtonSmall } from "../ButtonSmall/ButtonSmall";
 import styles from "./RecipeAllRecipes.module.css";
 
@@ -10,7 +11,7 @@ export function RecipeAllRecipes({
   proteins,
 }) {
   return (
-    <div className={styles.recipeAllRecipes}>
+    <Link className={styles.recipeAllRecipes}>
       <h3>{title}</h3>
       <img src={imgUrl} alt="FOTKA" className={styles.imgContainer} />
       <p>Wartości odżywcze:</p>
@@ -21,6 +22,6 @@ export function RecipeAllRecipes({
         <ButtonSmall>Pokaż przepis</ButtonSmall>
         <ButtonSmall>Dodaj</ButtonSmall>
       </div>
-    </div>
+    </Link>
   );
 }

@@ -1,6 +1,5 @@
 .mainMenu {
   align-items: center;
-  /*   background-image: url("./../../assets/logoBar.png"); */
   color: var(--color-text-white);
   display: flex;
   flex-direction: row;
@@ -9,22 +8,14 @@
   margin-left: 12rem;
   text-transform: uppercase;
   width: 60%;
-}
-/* li {
-  background-color: rgb(41, 39, 39);
-  border-radius: 8px;
-  height: 50%;
-  opacity: 0.9;
-  margin: 0 1rem;
-  padding: 0 1rem;
+
+  li {
+    border-bottom: 1px solid var(--color-border);
+    margin: 0 1rem;
+    padding: 0 1rem;
+  }
 }
 
-li .test {
-  color: var(--color-text-white);
-} */
-
-li {
-  border-bottom: 1px solid var(--color-border);
-  margin: 0 1rem;
-  padding: 0 1rem;
+.mainMenu a:global(.active) {
+  color: var(--color-text-main);
 }

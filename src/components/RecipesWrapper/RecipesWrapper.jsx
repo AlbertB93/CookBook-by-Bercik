@@ -1,13 +1,12 @@
 import styles from "./RecipesWrapper.module.css";
-import { DBTESTDISHES } from "../../constants/dbtestdishes";
 import { RecipeAllRecipes } from "../RecipeAllRecipes/RecipeAllRecipes";
 
-export function RecipesWrapper() {
+export function RecipesWrapper({ recipes }) {
   /* użyć useEffect? */
 
   return (
     <div className={styles.recipesWrapper}>
-      {DBTESTDISHES.map((dish) => (
+      {recipes.map((dish) => (
         <RecipeAllRecipes
           key={dish.id}
           id={dish.id}

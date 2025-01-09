@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AllRecipes } from "./views/AllRecipes/AllRecipes.jsx";
 import { Layout } from "./components/Layout/Layout.jsx";
 import { MainPage } from "./views/MainPage/MainPage.jsx";
+import { AllRecipesLoader } from "./api/AllRecipesLoader.js";
+import { SingleRecipe } from "./views/SingleRecipe/SingleRecipe.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,11 +17,16 @@ const router = createBrowserRouter([
       {
         path: "/przepisy",
         element: <AllRecipes />,
+        loader: AllRecipesLoader,
       },
       ,
       {
         path: "",
         element: <MainPage />,
+      },
+      {
+        path: "/przepis",
+        element: <SingleRecipe />,
       },
     ],
   },
