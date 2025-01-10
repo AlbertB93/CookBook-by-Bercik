@@ -38,26 +38,16 @@ export function SingleRecipe() {
 
   return (
     <ContentWrapper>
+      {" "}
       <div className={styles.singleRecipe}>
-        <div className={styles.topBar}>
-          <p className={styles.title}> {activeMeal.title}</p>
-          <ButtonSimple>Powrót</ButtonSimple>
-        </div>
-        <div className={styles.photoIngredientsValuesWrapper}>
+        <div className={styles.imgAndValues}>
           <div className={styles.imgContainerMeal}>
             <img
               src={activeMeal.imageState}
               alt="Zdjęcie"
               className={styles.logoImgMeal}
             />
-            <p>GRUPA POSIŁKU</p>
           </div>
-          <ul className={styles.ingredients}>
-            Składniki:
-            {activeMeal.essentialIngredients.map((ingredient) => (
-              <li key={Math.random()}> {ingredient}</li>
-            ))}
-          </ul>
           <div className={styles.values}>
             Wartości odżywcze:
             <p className={styles.value}> {activeMeal.kcal} kcal</p>
@@ -65,10 +55,26 @@ export function SingleRecipe() {
             <p className={styles.value}>Węglowodany: {activeMeal.carbons} g.</p>
             <p className={styles.value}>Białka: {activeMeal.proteins} g.</p>
           </div>
+          <p>GRUPA POSIŁKU</p>
         </div>
-        <div className={styles.howToCook}>
-          <p>Przygotowanie:</p>
-          {activeMeal.description}
+
+        <div className={styles.content}>
+          <div className={styles.titleMeal}>
+            <p className={styles.title}> {activeMeal.title}</p>
+            <ButtonSimple className={styles.btn}>Powrót</ButtonSimple>
+          </div>
+          <div className={styles.wrapper}>
+            <ul className={styles.ingredients}>
+              Składniki:
+              {activeMeal.essentialIngredients.map((ingredient) => (
+                <li key={Math.random()}> {ingredient}</li>
+              ))}
+            </ul>
+            <div className={styles.howToCook}>
+              <p>Przygotowanie:</p>
+              {activeMeal.description}
+            </div>
+          </div>
         </div>
       </div>
     </ContentWrapper>

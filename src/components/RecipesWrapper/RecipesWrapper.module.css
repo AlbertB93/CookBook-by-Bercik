@@ -12,7 +12,7 @@
 .recipesWrapper {
   display: flex;
   flex-wrap: wrap;
-  height: 400px;
+  height: 460px;
   justify-content: center;
   width: 680px;
   overflow-y: scroll;

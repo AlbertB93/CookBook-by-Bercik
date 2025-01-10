@@ -18,11 +18,7 @@ export function RecipesProducts() {
 
   return (
     <div className={styles.recipesProducts}>
-      <span>Wybierz produkty, które masz w lodówce</span>
       <div className={styles.selectBox}>
-        <Select /* filter={filter} setFilter={setFilter} */>
-          Wybierz grupę składników:
-        </Select>
         <Form /* inputValue={inputValue} setInputValue={setInputValue} */>
           Wyszukaj składnik:{" "}
         </Form>
@@ -35,7 +31,6 @@ export function RecipesProducts() {
           </div>
         ))}
       </div>
-      <ButtonSimple>Filtruj</ButtonSimple>
     </div>
   );
 }
