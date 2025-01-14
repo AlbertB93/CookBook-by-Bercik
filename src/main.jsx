@@ -19,14 +19,25 @@ const router = createBrowserRouter([
         element: <AllRecipes />,
         loader: AllRecipesLoader,
       },
-      ,
+      /*       {
+        path: "/przepisy/:group",
+        element: <AllRecipes />,
+        loader: ({ params }) => {
+          console.log(params);
+          return fetch(`http://localhost:3000/przepisy?group=${params.group}`);
+        },
+      }, */
       {
         path: "",
         element: <MainPage />,
       },
       {
-        path: "/przepis",
+        path: "/przepis/:id",
         element: <SingleRecipe />,
+        loader: ({ params }) => {
+          console.log("Params w main loader przepis: " + params);
+          return fetch(`http://localhost:3000/recipes?id=${params.id}`);
+        },
       },
     ],
   },

@@ -4,7 +4,7 @@ import { FILTERRECIPES } from "../../constants/categoriesRecipes";
 import styles from "./ExpandableMenu.module.css";
 
 export function ExpandableMenu() {
-  const activePath = "podzial-na-kalorie";
+  const activePath = "podzial-na-grupy";
   return (
     <div className={styles.expandableMenu}>
       <ul>
@@ -24,7 +24,10 @@ export function ExpandableMenu() {
                   {filter.groupOfRecipe.map((test) => {
                     return (
                       <li key={test.id}>
-                        <NavLink to={test.path}>{test.name}</NavLink>
+                        <NavLink to={test.path}>
+                          {test.name}
+                          {console.log("Co wyswietla?" + test.path)}
+                        </NavLink>
                       </li>
                     );
                   })}

@@ -1,9 +1,10 @@
+import { useLoaderData } from "react-router-dom";
 import { ButtonSimple } from "../../components/ButtonSimple/ButtonSimple";
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
 import styles from "./SingleRecipe.module.css";
 
 export function SingleRecipe() {
-  const activeMeal = {
+  /*   const activeMeal = {
     id: 1,
     title: "Bajgiel z awokado, jajkiem i boczkiem",
     group: "breakfast",
@@ -34,7 +35,10 @@ export function SingleRecipe() {
     ],
     description:
       "Jajko smażymy na patelnii - robimy jajko sadzone. Boczek podsmażamy na osobnej patelni. Bajgla kroimy wdłuż. Smarujemy awokado, układamy kolejno: sałatę, jajko, majonez, ogórka oraz boczek. ",
-  };
+  }; */
+
+  const activeRecipe = useLoaderData();
+  const activeMeal = activeRecipe[0];
 
   return (
     <ContentWrapper>

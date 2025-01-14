@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import { ButtonSmall } from "../ButtonSmall/ButtonSmall";
 import styles from "./RecipeAllRecipes.module.css";
 
 export function RecipeAllRecipes({
+  id,
   title,
   imgUrl,
   kcal,
@@ -19,7 +20,9 @@ export function RecipeAllRecipes({
         {kcal} kcal. T: {fats}g. W: {carbons}g. B: {proteins} g.
       </p>
       <div className={styles.buttons}>
-        <ButtonSmall>Pokaż przepis</ButtonSmall>
+        <ButtonSmall>
+          <NavLink to={`recipes/${id}`}>Pokaż przepis</NavLink>
+        </ButtonSmall>
         <ButtonSmall>Dodaj</ButtonSmall>
       </div>
     </Link>
