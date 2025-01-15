@@ -1,4 +1,4 @@
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { ButtonSmall } from "../ButtonSmall/ButtonSmall";
 import styles from "./RecipeAllRecipes.module.css";
 
@@ -12,7 +12,7 @@ export function RecipeAllRecipes({
   proteins,
 }) {
   return (
-    <Link className={styles.recipeAllRecipes}>
+    <div className={styles.recipeAllRecipes}>
       <h3>{title}</h3>
       <img src={imgUrl} alt="FOTKA" className={styles.imgContainer} />
       <p>Wartości odżywcze:</p>
@@ -21,10 +21,10 @@ export function RecipeAllRecipes({
       </p>
       <div className={styles.buttons}>
         <ButtonSmall>
-          <NavLink to={`recipes/${id}`}>Pokaż przepis</NavLink>
+          <NavLink to={`/przepis/${id}`}>Pokaż przepis</NavLink>
         </ButtonSmall>
         <ButtonSmall>Dodaj</ButtonSmall>
       </div>
-    </Link>
+    </div>
   );
 }

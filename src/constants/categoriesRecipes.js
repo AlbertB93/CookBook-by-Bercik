@@ -1,18 +1,19 @@
 export const FILTERRECIPES = [
   {
-    filterName: "Wybierz grupę przepisu:",
+    filterName: "Wybierz grupę przepisu",
     path: "podzial-na-grupy",
     groupOfRecipe: [
-      { id: 1, name: "śniadanie", path: "sniadanie" },
-      { id: 2, name: "obiad", path: "obiad" },
-      { id: 3, name: "kolacja", path: "kolacja" },
-      { id: 4, name: "deser", path: "deser" },
-      { id: 5, name: "święta", path: "swieta" },
-      { id: 6, name: "fit fastfood", path: "fit-fastfood" },
+      { id: 1, name: "wszystkie", path: "" },
+      { id: 2, name: "śniadanie", path: "sniadanie" },
+      { id: 3, name: "obiad", path: "obiad" },
+      { id: 4, name: "kolacja", path: "kolacja" },
+      { id: 5, name: "deser", path: "deser" },
+      { id: 6, name: "święta", path: "swieta" },
+      { id: 7, name: "fit fastfood", path: "fit-fastfood" },
     ],
   },
   {
-    filterName: "Wybierz kaloryczność przepisu:",
+    filterName: "Wybierz kaloryczność przepisu",
     path: "podzial-na-kalorie",
     groupOfRecipe: [
       { id: 1, name: "mało kaloryczne ( do 300 kcal )" },
@@ -22,7 +23,7 @@ export const FILTERRECIPES = [
     ],
   },
   {
-    filterName: "Wybierz grupę składników:",
+    filterName: "Wybierz grupę składników",
     path: "podzial-na-skladniki",
     groupOfRecipe: [
       { id: 1, name: "warzywa" },

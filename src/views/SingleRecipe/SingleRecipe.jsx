@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import { ButtonSimple } from "../../components/ButtonSimple/ButtonSimple";
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
 import styles from "./SingleRecipe.module.css";
@@ -45,7 +45,9 @@ export function SingleRecipe() {
       <div className={styles.singleRecipe}>
         <div className={styles.topBar}>
           <p className={styles.title}> {activeMeal.title}</p>
-          <ButtonSimple>Powrót</ButtonSimple>
+          <ButtonSimple>
+            <NavLink to={`/przepisy`}>Powrót</NavLink>
+          </ButtonSimple>
         </div>
         <div className={styles.photoIngredientsValuesWrapper}>
           <div className={styles.imgContainerMeal}>

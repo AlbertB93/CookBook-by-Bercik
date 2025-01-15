@@ -1,9 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import ARROW_ICON from "./../../assets/arrow.png";
 import { FILTERRECIPES } from "../../constants/categoriesRecipes";
 import styles from "./ExpandableMenu.module.css";
 
 export function ExpandableMenu() {
+  const params = useParams();
+  console.log("Co mamy ? " + params);
   const activePath = "podzial-na-grupy";
   return (
     <div className={styles.expandableMenu}>
@@ -21,12 +23,17 @@ export function ExpandableMenu() {
               </NavLink>
               {activePath === filter.path && (
                 <ul>
-                  {filter.groupOfRecipe.map((test) => {
+                  {filter.groupOfRecipe.map((singleGroup) => {
                     return (
-                      <li key={test.id}>
-                        <NavLink to={test.path}>
-                          {test.name}
-                          {console.log("Co wyswietla?" + test.path)}
+                      <li key={singleGroup.id}>
+                        <NavLink
+                          to={
+                            singleGroup.name === "wszystkie"
+                              ? `/przepisy`
+                              : `/przepisy/${singleGroup.path}`
+                          }
+                        >
+                          {singleGroup.name}
                         </NavLink>
                       </li>
                     );
@@ -40,12 +47,3 @@ export function ExpandableMenu() {
     </div>
   );
 }
-
-// obracanie strzałki
-/*
-className={
-  activePath === category.path
-      ? styles.expanded
-      : ""
-}
-      */

@@ -2,7 +2,11 @@ import "./styles/theme.css";
 import "./styles/globals.css";
 
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  redirect,
+  RouterProvider,
+} from "react-router-dom";
 import { AllRecipes } from "./views/AllRecipes/AllRecipes.jsx";
 import { Layout } from "./components/Layout/Layout.jsx";
 import { MainPage } from "./views/MainPage/MainPage.jsx";
@@ -19,14 +23,26 @@ const router = createBrowserRouter([
         element: <AllRecipes />,
         loader: AllRecipesLoader,
       },
-      /*       {
+      {
         path: "/przepisy/:group",
         element: <AllRecipes />,
         loader: ({ params }) => {
-          console.log(params);
-          return fetch(`http://localhost:3000/przepisy?group=${params.group}`);
+          const PATH_TO_ENDPOINT_MAPPING = {
+            sniadanie: "breakfast",
+            obiad: "dinner",
+            kolacja: "supper",
+            deser: "dessert",
+          };
+
+          const backEndPath = PATH_TO_ENDPOINT_MAPPING[params.group];
+
+          if (backEndPath) {
+            return fetch(`http://localhost:3000/recipes?group=${backEndPath}`);
+          } else {
+            return redirect("/przepisy");
+          }
         },
-      }, */
+      },
       {
         path: "",
         element: <MainPage />,

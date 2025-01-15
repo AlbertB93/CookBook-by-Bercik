@@ -8,6 +8,8 @@ import { ExpandableMenu } from "../../components/ExpandableMenu/ExpandableMenu";
 export function AllRecipes() {
   const RECIPES = useLoaderData();
 
+  console.log("pobrano: " + RECIPES);
+
   return (
     <ContentWrapper>
       <div className={styles.allRecipes}>
