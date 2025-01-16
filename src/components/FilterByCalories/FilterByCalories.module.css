@@ -1,0 +1,24 @@
+.filterByGroup {
+  color: var(--color-text-main);
+  display: flex;
+  flex-direction: column;
+}
+
+.options {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+
+  .singleOption {
+    border: solid 1px var(--color-border);
+    padding: 0.25rem;
+  }
+}
+
+.filterByGroup a:global(.active) {
+  color: var(--color-text-main);
+}

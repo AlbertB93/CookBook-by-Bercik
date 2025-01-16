@@ -2,16 +2,15 @@ import "./styles/theme.css";
 import "./styles/globals.css";
 
 import { createRoot } from "react-dom/client";
-import {
-  createBrowserRouter,
-  redirect,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { AllRecipes } from "./views/AllRecipes/AllRecipes.jsx";
 import { Layout } from "./components/Layout/Layout.jsx";
 import { MainPage } from "./views/MainPage/MainPage.jsx";
 import { AllRecipesLoader } from "./api/AllRecipesLoader.js";
 import { SingleRecipe } from "./views/SingleRecipe/SingleRecipe.jsx";
+import { SingleRecipeLoader } from "./api/SingleRecipeLoader.js";
+import { GroupOfRecipesLoader } from "./api/GroupOfRecipesLoader.js";
+import { GroupOfCaloriesLoader } from "./api/GroupOfCaloriesLoader.js";
 
 const router = createBrowserRouter([
   {
@@ -26,22 +25,12 @@ const router = createBrowserRouter([
       {
         path: "/przepisy/:group",
         element: <AllRecipes />,
-        loader: ({ params }) => {
-          const PATH_TO_ENDPOINT_MAPPING = {
-            sniadanie: "breakfast",
-            obiad: "dinner",
-            kolacja: "supper",
-            deser: "dessert",
-          };
-
-          const backEndPath = PATH_TO_ENDPOINT_MAPPING[params.group];
-
-          if (backEndPath) {
-            return fetch(`http://localhost:3000/recipes?group=${backEndPath}`);
-          } else {
-            return redirect("/przepisy");
-          }
-        },
+        loader: GroupOfRecipesLoader,
+      },
+      {
+        path: "/przepisy/kalorie/:groupOfCalories",
+        element: <AllRecipes />,
+        loader: GroupOfCaloriesLoader,
       },
       {
         path: "",
@@ -50,10 +39,7 @@ const router = createBrowserRouter([
       {
         path: "/przepis/:id",
         element: <SingleRecipe />,
-        loader: ({ params }) => {
-          console.log("Params w main loader przepis: " + params);
-          return fetch(`http://localhost:3000/recipes?id=${params.id}`);
-        },
+        loader: SingleRecipeLoader,
       },
     ],
   },

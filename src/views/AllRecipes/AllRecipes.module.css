@@ -1,3 +1,14 @@
+.filterMenu::-webkit-scrollbar {
+  background-color: rgb(52, 50, 50);
+  border-radius: 12px;
+  width: 8px;
+}
+
+.filterMenu::-webkit-scrollbar-thumb {
+  background-color: var(--color-text-main);
+  border-radius: 12px;
+}
+
 .allRecipes {
   display: flex;
   flex-direction: row;
@@ -7,7 +18,7 @@
   width: 90%;
 }
 
-.recipesFilter {
+.filterMenu {
   align-items: center;
   border: solid 1px var(--color-border);
   border-radius: 4px;
@@ -15,6 +26,7 @@
   flex-direction: column;
   height: 460px;
   margin-left: 2rem;
-  padding: 0.5rem;
-  width: 360px;
+  padding: 0.25rem;
+  overflow-y: scroll;
+  width: 90%px;
 }
