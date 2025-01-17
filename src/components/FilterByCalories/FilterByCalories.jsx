@@ -9,13 +9,7 @@ export function FilterByCalories() {
         {FILTERCALORIES.map((singleGroup) => {
           return (
             <div key={singleGroup.id} className={styles.singleOption}>
-              <NavLink
-                to={
-                  singleGroup.name === "wszystkie"
-                    ? `/przepisy`
-                    : `/przepisy/kalorie/${singleGroup.path}`
-                }
-              >
+              <NavLink to={`/przepisy/kalorie/${singleGroup.path}`}>
                 {singleGroup.name}
               </NavLink>
             </div>

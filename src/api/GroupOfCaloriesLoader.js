@@ -5,8 +5,8 @@ import {
 } from "../constants/api";
 
 export function GroupOfCaloriesLoader({ params }) {
-  console.log("Co jest? " + params.group);
-  const backEndPath = PATH_CALORIES_TO_ENDPOINT_MAPPING[params.group];
+  console.log("Co jest? calories " + params.groupOfCalories);
+  const backEndPath = PATH_CALORIES_TO_ENDPOINT_MAPPING[params.groupOfCalories];
   console.log("Co jest? " + backEndPath);
 
   if (backEndPath) {

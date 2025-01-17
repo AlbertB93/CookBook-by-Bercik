@@ -1,23 +1,18 @@
 import { NavLink } from "react-router-dom";
 import { FILTERPRODUCTSBYGROUP } from "../../constants/filterRecipes";
 import styles from "./FilterProductsByGroup.module.css";
+import { ButtonSmall } from "../ButtonSmall/ButtonSmall";
 
-export function FilterProductsByGroup() {
+export function FilterProductsByGroup({ setGroupOfProducts }) {
   return (
     <div className={styles.filterByGroup}>
       <div className={styles.options}>
         {FILTERPRODUCTSBYGROUP.map((singleGroup) => {
           return (
             <div key={singleGroup.id} className={styles.singleOption}>
-              <NavLink
-                to={
-                  singleGroup.name === "wszystkie"
-                    ? `/przepisy`
-                    : `/przepisy/${singleGroup.path}`
-                }
-              >
+              <ButtonSmall onClick={() => setGroupOfProducts(singleGroup.name)}>
                 {singleGroup.name}
-              </NavLink>
+              </ButtonSmall>
             </div>
           );
         })}

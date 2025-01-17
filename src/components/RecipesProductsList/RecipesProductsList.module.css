@@ -1,0 +1,28 @@
+.productsList::-webkit-scrollbar {
+  background-color: rgb(52, 50, 50);
+  border-radius: 8px;
+  width: 8px;
+}
+
+.productsList::-webkit-scrollbar-thumb {
+  background-color: var(--color-text-main);
+  border-radius: 8px;
+}
+
+input[type="checkbox"] {
+  accent-color: orange;
+}
+
+input[type="checkbox"]:checked + label {
+  color: orange;
+}
+
+.productsList {
+  border: solid 1px var(--color-border);
+  border-radius: 4%;
+  color: var(--color-text-white);
+  max-height: 200px;
+  overflow-y: scroll;
+  padding: 1rem;
+  width: 100%;
+}

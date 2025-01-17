@@ -1,36 +1,37 @@
 import styles from "./RecipesProducts.module.css";
-import { ButtonSimple } from "../../components/ButtonSimple/ButtonSimple";
-import { Select } from "../../components/Select/Select";
 import { Form } from "../../components/Forms/Form";
-import { BACK_END_URL } from "../../constants/api";
-import { useEffect, useState } from "react";
+
+import { useState } from "react";
+import { ButtonSmall } from "../ButtonSmall/ButtonSmall";
+import { FilterProductsByGroup } from "../FilterProductsByGroup/FilterProductsByGroup";
+import { RecipesProductsList } from "../RecipesProductsList/RecipesProductsList";
 
 export function RecipesProducts() {
-  const [products, setProdcts] = useState([]);
+  const [showFilterProductsByGroup, setShowFilterProductsByGroup] =
+    useState(false);
 
-  useEffect(() => {
-    fetch(`${BACK_END_URL}/products`)
-      .then((res) => res.json())
-      .then((res) => {
-        setProdcts(res);
-      });
-  }, []);
+  const [groupOfProducts, setGroupOfProducts] = useState("wszystkie");
 
   return (
     <div className={styles.recipesProducts}>
+      <ButtonSmall
+        onClick={() => setShowFilterProductsByGroup((prevState) => !prevState)}
+      >
+        Wybierz grupę produktów
+      </ButtonSmall>
+      {showFilterProductsByGroup && (
+        <FilterProductsByGroup
+          setGroupOfProducts={setGroupOfProducts}
+        ></FilterProductsByGroup>
+      )}
       <div className={styles.selectBox}>
         <Form /* inputValue={inputValue} setInputValue={setInputValue} */>
           Wyszukaj składnik:{" "}
         </Form>
       </div>
-      <div className={styles.productsList}>
-        {products.map((product) => (
-          <div key={product.id}>
-            <input type="checkbox" id={product.id} name={product.name} />
-            <label htmlFor={product.id}>{product.name}</label>
-          </div>
-        ))}
-      </div>
+      <RecipesProductsList
+        groupOfProducts={groupOfProducts}
+      ></RecipesProductsList>
     </div>
   );
 }
