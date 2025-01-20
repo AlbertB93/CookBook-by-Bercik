@@ -18,7 +18,6 @@ input[type="checkbox"]:checked + label {
 }
 
 .productsList {
-  border: solid 1px var(--color-border);
   border-radius: 4%;
   color: var(--color-text-white);
   max-height: 200px;

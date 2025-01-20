@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FilterByCalories } from "../FilterByCalories/FilterByCalories";
 import { FilterByGroup } from "../FilterByGroup/FilterByGroup";
 import styles from "./FiltersRecipes.module.css";
-import { ButtonSmall } from "../ButtonSmall/ButtonSmall";
+import { ButtonAllRecipes } from "../ButtonAllRecipes/buttonAllRecipes";
 
 export function FilterRecipes() {
   const [showFilterByGroup, setShowFilterByGroup] = useState(false);
@@ -10,19 +10,19 @@ export function FilterRecipes() {
 
   return (
     <div className={styles.filterRecipes}>
-      <ButtonSmall
+      <ButtonAllRecipes
         onClick={() => setShowFilterByGroup((prevState) => !prevState)}
       >
         Wybierz grupę posiłku
-      </ButtonSmall>
+      </ButtonAllRecipes>
 
       {showFilterByGroup && <FilterByGroup></FilterByGroup>}
 
-      <ButtonSmall
+      <ButtonAllRecipes
         onClick={() => setShowFilterByCalories((prevState) => !prevState)}
       >
         Wybierz kaloryczność posiłku
-      </ButtonSmall>
+      </ButtonAllRecipes>
       {showFilterByCalories && <FilterByCalories></FilterByCalories>}
     </div>
   );

@@ -1,5 +1,5 @@
 .recipesProducts {
-  align-items: center;
+  align-items: flex-start;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,6 @@
 
 .selectBox {
   align-items: center;
-  border: solid 1px var(--color-border);
   border-radius: 8px;
   display: flex;
   height: 80px;
