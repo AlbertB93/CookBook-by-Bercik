@@ -9,15 +9,9 @@
   padding: 0.25rem;
   width: 70%;
 
-  .filterBox {
-      align-items: center;
-      display: flex;
-      flex: row;
-      justify-content: center;
-      gap: 0.5rem;
-  
-      p {
-        font-size: 0.75rem;
-      }
-    }
+  button {
+    border-bottom: solid 1px var(--color-border);
+    color: var(--color-text-main);
+    text-transform: uppercase;
+  }
 }
