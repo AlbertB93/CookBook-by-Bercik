@@ -4,41 +4,14 @@ import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
 import styles from "./SingleRecipe.module.css";
 
 export function SingleRecipe() {
-  /*   const activeMeal = {
-    id: 1,
-    title: "Bajgiel z awokado, jajkiem i boczkiem",
-    group: "breakfast",
-    imageState: "../../../public/recipes/1_bajgiel-awokado-jajko-boczek.jpg",
-    kcal: 470,
-    fats: 23,
-    carbons: 45,
-    proteins: 19,
-    groupOfCalories: "medium",
-    servings: 1,
-    essentialIngredients: [
-      "bajgiel z makiem",
-      "awokado",
-      "jajko",
-      "boczek parzony wędzony",
-      "majonez vege",
-      "sałata lodowa",
-      "ogórek kiszony",
-    ],
-    weightEssentialIngredients: [
-      "1 szt. (80g.)",
-      "0.5 szt. (40g.)",
-      "1 szt. (50g.)",
-      "2 plastry (30g.)",
-      "1 łyżka (20g.)",
-      "1 liść (10 g.)",
-      "0.5 szt. (40g.)",
-    ],
-    description:
-      "Jajko smażymy na patelnii - robimy jajko sadzone. Boczek podsmażamy na osobnej patelni. Bajgla kroimy wdłuż. Smarujemy awokado, układamy kolejno: sałatę, jajko, majonez, ogórka oraz boczek. ",
-  }; */
-
   const activeRecipe = useLoaderData();
   const activeMeal = activeRecipe[0];
+
+  const groupOfRecipe = {
+    breakfast: "śniadanie",
+    dinner: "obiad",
+    dessert: "desery",
+  };
 
   return (
     <ContentWrapper>
@@ -56,11 +29,16 @@ export function SingleRecipe() {
               alt="Zdjęcie"
               className={styles.logoImgMeal}
             />
-            <p>GRUPA POSIŁKU</p>
           </div>
           <ul className={styles.ingredients}>
             Składniki:
             {activeMeal.essentialIngredients.map((ingredient) => (
+              <li key={Math.random()}> {ingredient}</li>
+            ))}
+          </ul>
+          <ul className={styles.ingredients}>
+            Ilość:
+            {activeMeal.weightEssentialIngredients.map((ingredient) => (
               <li key={Math.random()}> {ingredient}</li>
             ))}
           </ul>
@@ -70,6 +48,8 @@ export function SingleRecipe() {
             <p className={styles.value}>Tłuszcze: {activeMeal.fats} g.</p>
             <p className={styles.value}>Węglowodany: {activeMeal.carbons} g.</p>
             <p className={styles.value}>Białka: {activeMeal.proteins} g.</p>
+            Grupa posiłku:
+            <p>{groupOfRecipe[activeMeal.group]}</p>
           </div>
         </div>
         <div className={styles.howToCook}>

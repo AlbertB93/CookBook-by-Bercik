@@ -1,0 +1,22 @@
+.aboutPage {
+  border: solid 1px var(--color-border);
+  border-radius: 8px;
+  margin: auto auto;
+  margin-top: 2rem;
+  padding: 1rem;
+  width: 90%;
+
+  .shortDescription {
+    margin: 1rem;
+  }
+
+  .inspiationWrapper {
+    margin: 1rem;
+
+    ul {
+      li {
+        color: white;
+      }
+    }
+  }
+}

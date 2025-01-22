@@ -8,14 +8,18 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  font-size: 0.75rem;
   gap: 0.5rem;
   justify-content: center;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 
-  .singleOption {
-    padding: 0.5rem;
+  button {
+    background: none;
+    border: solid 1px var(--color-border);
+    cursor: pointer;
+    font-size: 0.75rem;
+    text-transform: lowercase;
+    padding: 0.25rem;
   }
 }
 

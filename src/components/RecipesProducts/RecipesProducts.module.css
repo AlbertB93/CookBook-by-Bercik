@@ -1,5 +1,6 @@
 .recipesProducts {
   align-items: flex-start;
+  border: solid 1px var(--color-border);
   border-radius: 4px;
   display: flex;
   flex-direction: column;

@@ -10,9 +10,9 @@ export function FilterProductsByGroup({ setGroupOfProducts }) {
         {FILTERPRODUCTSBYGROUP.map((singleGroup) => {
           return (
             <div key={singleGroup.id} className={styles.singleOption}>
-              <ButtonSmall onClick={() => setGroupOfProducts(singleGroup.name)}>
+              <button onClick={() => setGroupOfProducts(singleGroup.name)}>
                 {singleGroup.name}
-              </ButtonSmall>
+              </button>
             </div>
           );
         })}
