@@ -11,9 +11,7 @@ export function AllRecipes() {
   return (
     <ContentWrapper>
       <div className={styles.allRecipes}>
-        <div className={styles.filterMenu}>
-          <FilterRecipes></FilterRecipes>
-        </div>
+        <FilterRecipes></FilterRecipes>
         <RecipesWrapper recipes={RECIPES}> </RecipesWrapper>
       </div>
     </ContentWrapper>

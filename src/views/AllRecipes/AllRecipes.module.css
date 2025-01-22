@@ -1,32 +1,10 @@
-.filterMenu::-webkit-scrollbar {
-  background-color: rgb(52, 50, 50);
-  border-radius: 12px;
-  width: 8px;
-}
-
-.filterMenu::-webkit-scrollbar-thumb {
-  background-color: var(--color-text-main);
-  border-radius: 12px;
-}
-
 .allRecipes {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 480px;
-  margin-top: 3rem;
-  width: 90%;
-}
-
-.filterMenu {
   align-items: center;
-
-  border-radius: 4px;
   display: flex;
   flex-direction: column;
-  height: 460px;
-  margin-left: 2rem;
-  padding: 0.25rem;
-
-  width: 90%px;
+  justify-content: space-between;
+  height: 480px;
+  margin: auto auto;
+    margin-top: 1rem;
+  width: 90%;
 }
