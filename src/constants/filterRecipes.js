@@ -6,6 +6,7 @@ export const FILTERGROUP = [
   { id: 5, name: "deser", path: "deser" },
   { id: 6, name: "święta", path: "swieta" },
   { id: 7, name: "fit fastfood", path: "fit-fastfood" },
+  { id: 8, name: "sałatki", path: "sałatki" },
 ];
 
 export const FILTERCALORIES = [

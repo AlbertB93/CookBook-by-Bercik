@@ -5,6 +5,7 @@ export const PATH_GROUP_TO_ENDPOINT_MAPPING = {
   obiad: "dinner",
   kolacja: "supper",
   deser: "dessert",
+  sałatki: "salad",
 };
 
 export const PATH_CALORIES_TO_ENDPOINT_MAPPING = {
