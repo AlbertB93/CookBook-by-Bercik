@@ -9,15 +9,13 @@ import { Form } from "../../components/Forms/Form";
 
 export function AllRecipes() {
   const RECIPES = useLoaderData();
-  const [inputValue, setInputValue] = useState("");
+
+  const [filter, setFilter] = useState("all");
   return (
     <ContentWrapper>
       <div className={styles.allRecipes}>
-        <Form inputValue={inputValue} setInputValue={setInputValue}>
-          Wyszukaj potrawę:{" "}
-        </Form>
-        <FilterRecipes></FilterRecipes>
-        <RecipesWrapper recipes={RECIPES}> </RecipesWrapper>
+        <FilterRecipes filter={filter} setFilter={setFilter}></FilterRecipes>
+        <RecipesWrapper recipes={RECIPES} filter={filter}></RecipesWrapper>
       </div>
     </ContentWrapper>
   );

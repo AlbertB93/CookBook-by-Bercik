@@ -5,11 +5,11 @@
   font-size: 1rem;
   margin-left: 100px;
   padding: 0 20px 20px;
-  width: 90%;
 }
 
 .input {
   border: solid 3px var(--color-text-main);
+  border-radius: 8px;
   background-color: transparent;
   color: var(--color-header);
   width: 300px;

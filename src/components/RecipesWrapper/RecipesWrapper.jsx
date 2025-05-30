@@ -1,12 +1,19 @@
 import styles from "./RecipesWrapper.module.css";
 import { RecipeAllRecipes } from "../RecipeAllRecipes/RecipeAllRecipes";
 
-export function RecipesWrapper({ recipes }) {
+export function RecipesWrapper({ recipes, filter }) {
   /* użyć useEffect? */
+
+  const filteredRecipes =
+    filter === "all"
+      ? recipes
+      : recipes.filter(
+          (recipe) => recipe.group === filter || recipe.groupB === filter
+        );
 
   return (
     <div className={styles.recipesWrapper}>
-      {recipes.map((dish) => (
+      {filteredRecipes.map((dish) => (
         <RecipeAllRecipes
           key={dish.id}
           id={dish.id}
