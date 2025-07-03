@@ -63,7 +63,8 @@
     {
       "id": 3,
       "title": "Omlet ze smażonym jabłkiem",
-      "group": ["supper", "breakfast"],
+      "group": "supper",
+      "groupB": "breakfast",
       "imageState": "/recipes/3_omlet-ze-smażonym-jabłkiem.jpg",
       "kcal": 728,
       "fats": 29,
@@ -125,7 +126,8 @@
     {
       "id": 5,
       "title": "Pałeczki w serowej panierce",
-      "group": ["dinner", "supper"],
+      "group": "dinner",
+      "groupB": "supper",
       "imageState": "/recipes/5_pałeczki-w-panko-i-parmezanie.jpg",
       "kcal": 379,
       "fats": 14,
@@ -154,7 +156,8 @@
     {
       "id": 6,
       "title": "Nuggesty w serowej panierce",
-      "group": ["dinner", "supper"],
+      "group": "dinner",
+      "groupB": "supper",
       "imageState": "/recipes/6_nuggetsy-z-piekarnika-w-panko-i-parmezanie.jpg",
       "kcal": 548,
       "fats": 23,
@@ -491,7 +494,8 @@
     {
       "id": 17,
       "title": "Pieczona owsianka bananowo orzechowa z posypką z czekolady",
-      "group": ["breakfast", "supper"],
+      "group": "breakfast",
+      "groupB": "supper",
       "imageState": "/recipes/17_owsianka-gruszkowo-czekoladowa-z-lodami.jpg",
       "kcal": 593,
       "fats": 32,

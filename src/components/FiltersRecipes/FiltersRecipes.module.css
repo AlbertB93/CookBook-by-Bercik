@@ -19,9 +19,8 @@ select {
   color: var(--color-header);
   margin: 6px;
   padding: 6px;
-  text-align: center;
   transition: 0.4s;
-  width: 120px;
+  width: 160px;
 
   .button {
     background-color: yellow;
