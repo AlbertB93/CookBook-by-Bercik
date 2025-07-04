@@ -19,3 +19,13 @@
 .mainMenu a:global(.active) {
   color: var(--color-text-main);
 }
+
+@media only screen and (max-width: 576px) {
+  /* CSS rules specific for extra small screens */
+  .mainMenu {
+    font-size: 0.8rem;
+    margin: 0;
+    text-align: center;
+    width: 100%;
+  }
+}

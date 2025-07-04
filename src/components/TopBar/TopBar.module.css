@@ -10,3 +10,11 @@
   text-shadow: 2px 2px 30px rgb(198, 196, 196);
   width: 60%;
 }
+
+@media only screen and (max-width: 576px) {
+  /* CSS rules specific for extra small screens */
+  .topBar {
+    margin: 0;
+    width: 100%;
+  }
+}

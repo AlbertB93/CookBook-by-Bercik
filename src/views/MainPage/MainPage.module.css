@@ -1,9 +1,21 @@
 .mainPage {
-align-items: center;
+  align-items: center;
   display: flex;
   flex-direction: row;
   height: 70vh;
   justify-content: space-around;
   margin: 1rem;
   margin-top: 2rem;
+}
+
+@media only screen and (max-width: 576px) {
+  /* CSS rules specific for extra small screens */
+  .mainPage {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    overflow: scroll;
+  }
 }
