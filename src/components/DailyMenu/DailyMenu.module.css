@@ -37,3 +37,84 @@ p {
   color: var(--color-text-white);
   font-size: 0.75rem;
 }
+
+.imgContainer {
+  background-color: var(--color-main);
+  border: solid 4px silver;
+  border-radius: 90px;
+  display: flex;
+  height: 120px;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: -16px;
+  width: 120px;
+}
+
+.singleMeal {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80px;
+  justify-content: space-evenly;
+  margin: 2px;
+  padding: 2px;
+  width: 98%;
+
+  .titleMeal {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 74%;
+  }
+
+  .imgContainerMeal {
+    background-color: var(--color-main);
+    border: solid 1px silver;
+    border-radius: 8px;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    overflow: hidden;
+    width: 70px;
+  }
+
+  .logoImgMeal {
+    margin: auto auto;
+    max-height: 110%;
+  }
+
+  .values {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+    justify-content: space-between;
+    margin: 4px;
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  /* CSS rules specific for extra small screens */
+
+  .dailyMenu {
+    order: 1;
+    margin: 0;
+    margin-top: 40px;
+    min-height: 200px;
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 90%;
+  }
+
+  .imgContainer {
+    border: solid 1px var(--color-border-white);
+    height: 60px;
+    width: 60px;
+  }
+}
