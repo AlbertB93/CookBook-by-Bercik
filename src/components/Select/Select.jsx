@@ -4,7 +4,7 @@ export function Select({ children, filter, setFilter }) {
   return (
     <div className={styles.selectContainer}>
       <label htmlFor="ingredients" className={styles.label}>
-        {children}
+        <h3> {children}</h3>
       </label>
       <select
         value={filter}

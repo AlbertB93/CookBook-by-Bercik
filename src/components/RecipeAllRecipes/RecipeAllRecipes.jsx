@@ -15,40 +15,6 @@ export function RecipeAllRecipes({
 }) {
   const [listOfMeals, addToDailyMenu] = useContext(ListOfMealsStateContext);
 
-  /*   function addToDailyMenu(
-    newId,
-    newTitle,
-    newImgUrl,
-    newKcal,
-    newFats,
-    newCarbons,
-    newProteins
-  ) {
-    setSummaryOfDay((prevState) => {
-      prevState.kcal += newKcal;
-      prevState.fats += newFats;
-      prevState.carbons += newCarbons;
-      prevState.proteins += newProteins;
-      return { ...prevState };
-    });
-
-    setListOfMeals((prevState) => {
-      return [
-        ...prevState,
-        {
-          id: newId,
-          title: newTitle,
-          img: newImgUrl,
-          kcal: newKcal,
-          fats: newFats,
-          carbons: newCarbons,
-          proteins: newProteins,
-        },
-      ];
-    });
-  }
- */
-
   return (
     <ListOfMealsStateContext.Provider value={[listOfMeals, addToDailyMenu]}>
       <div className={styles.recipeAllRecipes}>

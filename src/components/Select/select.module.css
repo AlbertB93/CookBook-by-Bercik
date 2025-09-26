@@ -1,23 +1,36 @@
 .selectContainer {
+  display: flex;
+  flex-direction: column;
 
-  border: solid 1px var(--color-border);
-  border-radius: 4px;
-
-  .select {
-    background-color: transparent;
-    border: solid 1px var(--color-header);
+  select {
+    border: 1px solid var(--color-border);
     border-radius: 8px;
+    background: transparent;
     color: var(--color-header);
-    height: 28px;
-    font-size: 0.75rem;
-    width: 100px;
+    margin: 6px;
+    padding: 6px;
+    transition: 0.4s;
+    width: 160px;
+
+    .button {
+      background-color: yellow;
+    }
   }
 
-  .select option {
-    background-color: black;
-    font-size: 0.75rem;
-    margin: 4px;
-    padding: 4px;
+  select:hover,
+  select:focus {
+    background: transparent;
+  }
+
+  option {
+    background: black;
+    padding: 10px;
+  }
+
+  option:checked {
+    /*   background-color: var(--color-text-main);
+  color: black; */
+    font-weight: bold;
   }
 
   .label {

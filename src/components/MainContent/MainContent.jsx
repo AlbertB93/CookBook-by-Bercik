@@ -43,6 +43,7 @@ export function MainContent({ children }) {
   }
 
   function deleteFromMenu(id, kcal, fats, carbons, proteins) {
+    console.log("deleteFrom: " + id);
     setListOfMeals((prevState) => prevState.filter((meal) => meal.id !== id));
 
     setSummaryOfDay((prevState) => {

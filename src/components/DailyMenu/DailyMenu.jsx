@@ -5,10 +5,10 @@ import { SummaryOfDayStateContext } from "../../contexts/SummaryOfDayStateContex
 import { ListOfMealsStateContext } from "../../contexts/ListOfMealsStateContext";
 
 export function DailyMenu() {
-  const [listOfMeals, deleteFromMenu] = useContext(ListOfMealsStateContext);
+  const [listOfMeals, addToDailyMenu, deleteFromMenu] = useContext(
+    ListOfMealsStateContext
+  );
   const [summaryOfDay] = useContext(SummaryOfDayStateContext);
-
-  console.log("Daily Menu: " + listOfMeals);
 
   return (
     <div className={styles.dailyMenu}>
