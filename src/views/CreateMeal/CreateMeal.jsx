@@ -186,6 +186,7 @@ export function CreateMeal() {
 
         <NewMealComposition
           listOfIngredients={listOfIngredients}
+          setListOfIngredients={setListOfIngredients}
           valuesOfMeal={valuesOfMeal}
           handleAddToDay={handleAddToDay}
           eventHandlerDeleteIngredient={eventHandlerDeleteIngredient}

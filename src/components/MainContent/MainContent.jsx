@@ -22,6 +22,7 @@ export function MainContent({ children }) {
       prevState.fats += fats;
       prevState.carbons += carbons;
       prevState.proteins += proteins;
+
       return { ...prevState };
     });
 
