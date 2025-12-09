@@ -42,6 +42,7 @@ const router = createBrowserRouter([
       {
         path: "",
         element: <MainPage />,
+        loader: AllRecipesLoader,
       },
       {
         path: "/o-stronie",

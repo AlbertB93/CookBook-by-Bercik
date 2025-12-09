@@ -1,12 +1,6 @@
 import styles from "./form.module.css";
 
 export function Form({ children, inputValue, setInputValue }) {
-  function test(inputValue) {
-    console.log("test: " + inputValue);
-  }
-
-  test(inputValue);
-
   return (
     <form
       value={inputValue}

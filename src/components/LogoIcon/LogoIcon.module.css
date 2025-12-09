@@ -1,6 +1,14 @@
 .logoIcon {
-    /*     background-color: var(--color-border); */
-    border-radius: 12px;
-    height: 60px;
-    width: 60px;
+  /*     background-color: var(--color-border); */
+  border-radius: 12px;
+  height: 60px;
+  width: 60px;
+}
+
+@media only screen and (max-width: 576px) {
+  /* CSS rules specific for extra small screens */
+  .logoIcon {
+    height: 40px;
+    width: 40px;
+  }
 }

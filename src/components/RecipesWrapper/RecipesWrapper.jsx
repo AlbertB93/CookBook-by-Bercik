@@ -7,7 +7,7 @@ export function RecipesWrapper({
   filterCalories,
   inputValue,
 }) {
-  /* użyć useEffect? */
+  console.log("RecipesWrapper RECIPES: " + recipes[0].title);
 
   const filteredRecipes =
     filterGroup === "all"
