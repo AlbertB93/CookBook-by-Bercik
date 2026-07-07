@@ -7,12 +7,6 @@ export function SingleRecipe() {
   const activeRecipe = useLoaderData();
   const activeMeal = activeRecipe[0];
 
-  const groupOfRecipe = {
-    breakfast: "śniadanie",
-    dinner: "obiad",
-    dessert: "desery",
-  };
-
   return (
     <ContentWrapper>
       <div className={styles.singleRecipe}>
@@ -36,20 +30,12 @@ export function SingleRecipe() {
               <li key={Math.random()}> {ingredient}</li>
             ))}
           </ul>
-          <ul className={styles.ingredients}>
-            Ilość:
-            {activeMeal.weightEssentialIngredients.map((ingredient) => (
-              <li key={Math.random()}> {ingredient}</li>
-            ))}
-          </ul>
           <div className={styles.values}>
             Wartości odżywcze:
             <p className={styles.value}> {activeMeal.kcal} kcal</p>
             <p className={styles.value}>Tłuszcze: {activeMeal.fats} g.</p>
             <p className={styles.value}>Węglowodany: {activeMeal.carbons} g.</p>
             <p className={styles.value}>Białka: {activeMeal.proteins} g.</p>
-            Grupa posiłku:
-            <p>{groupOfRecipe[activeMeal.group]}</p>
           </div>
         </div>
         <div className={styles.howToCook}>

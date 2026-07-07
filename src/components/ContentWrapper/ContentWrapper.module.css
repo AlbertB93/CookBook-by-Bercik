@@ -7,6 +7,7 @@
 @media only screen and (max-width: 576px) {
   /* CSS rules specific for extra small screens */
   .contentWrapper {
+    display: flex;
     width: 98%;
   }
 }

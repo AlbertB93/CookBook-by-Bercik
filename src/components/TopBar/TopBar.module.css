@@ -11,6 +11,18 @@
   width: 60%;
 }
 
+.imgContainer {
+  align-items: center;
+  background-color: var(--color-main);
+  border: solid 2px silver;
+  border-radius: 90px;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  overflow: hidden;
+  width: 90px;
+}
+
 @media only screen and (max-width: 576px) {
   /* CSS rules specific for extra small screens */
   .topBar {
