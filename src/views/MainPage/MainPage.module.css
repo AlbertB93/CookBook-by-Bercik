@@ -3,9 +3,58 @@
   display: flex;
   flex-direction: row;
   height: 70vh;
-  justify-content: space-around;
-  margin: 1rem;
-  margin-top: 2rem;
+}
+
+.carousel {
+  margin: 100px auto;
+  width: 98%;
+
+  display: flex;
+  overflow-x: auto;
+  height: 90%;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.group {
+  display: flex;
+  border-radius: 0.4em;
+  animation: spin 60s infinite linear;
+}
+
+.card {
+  padding: 1em;
+  font-size: 1.5em;
+  flex: 0 0 16em;
+
+  text-align: center;
+  align-content: center;
+  overflow: hidden;
+  width: 600px;
+}
+
+.imgContainer {
+  border-radius: 0.4em;
+  height: 100%;
+  width: auto;
+}
+
+.imgContainerOpacity {
+  border-radius: 0.4em;
+  height: 100%;
+  opacity: 0.8;
+  width: auto;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -14,7 +63,7 @@
     flex-direction: column;
     margin: 0;
     margin-top: 12px;
-    gap: 12px;
+    gap: 4px;
     width: 100%;
   }
 }

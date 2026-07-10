@@ -3,12 +3,22 @@
   display: flex;
   flex-direction: row;
   height: 10vh;
-  justify-content: center;
+  justify-content: space-between;
   margin: 1.5rem auto;
-  margin-left: 12rem;
   position: relative;
   text-shadow: 2px 2px 30px rgb(198, 196, 196);
-  width: 60%;
+  text-transform: uppercase;
+  width: 84%;
+}
+
+.topBarCenter {
+  display: flex;
+  flex-direction: row;
+}
+
+.corner {
+  font-size: 1.2em;
+  opacity: 0.8;
 }
 
 .imgContainer {

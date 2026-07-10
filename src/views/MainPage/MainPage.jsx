@@ -1,45 +1,66 @@
 import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
-import { RecipeMainPage } from "../../components/RecipeMainPage/RecipeMainPage";
+import { MainMenu } from "../../components/MainMenu/MainMenu";
 import styles from "./MainPage.module.css";
-import { useLoaderData } from "react-router-dom";
-
+import DISH1 from "../../assets/dish1.jpg";
+import DISH2 from "../../assets/dish2.jpg";
+import DISH3 from "../../assets/dish3.jpg";
+import DISH4 from "../../assets/dish4.jpg";
+import DISH5 from "../../assets/dish5.jpg";
+import DISH6 from "../../assets/dish6.jpg";
 export function MainPage() {
-  const recipes = useLoaderData();
-
-  /*   setInterval(drawId, 1000); */
-
-  let a = 2;
-  let b = 4;
-  let c = 6;
-
-  function drawId() {
-    a = Math.floor(Math.random() * 50 + 1);
-    b = Math.floor(Math.random() * 50 + 1);
-    c = Math.floor(Math.random() * 50 + 1);
-    console.log("liczby w funkcji: " + a, b, c);
-  }
+  const dishPictures = [
+    { id: 1, url: DISH1 },
+    { id: 2, url: DISH2 },
+    { id: 3, url: DISH3 },
+    { id: 4, url: DISH4 },
+    { id: 5, url: DISH5 },
+    { id: 6, url: DISH6 },
+  ];
 
   return (
     <ContentWrapper>
+      <MainMenu></MainMenu>
       <div className={styles.mainPage}>
-        {recipes
-          .filter(
-            (recipe) => recipe.id == a || recipe.id == b || recipe.id == c
-          )
-          .map((dish) => (
-            <RecipeMainPage
-              key={dish.id}
-              id={dish.id}
-              title={dish.title}
-              imgUrl={dish.imageState}
-              kcal={dish.kcal}
-              fats={dish.fats}
-              carbons={dish.carbons}
-              proteins={dish.proteins}
-              ingredients={dish.ingredients}
-              description={dish.description}
-            />
-          ))}
+        <div className={styles.carousel}>
+          <div className={styles.group}>
+            {dishPictures.map((image) => (
+              <div className={styles.card} key={image.id}>
+                {image.id % 2 == 0 ? (
+                  <img
+                    src={image.url}
+                    alt="images"
+                    className={styles.imgContainerOpacity}
+                  />
+                ) : (
+                  <img
+                    src={image.url}
+                    alt="images"
+                    className={styles.imgContainer}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+          <div className={styles.group}>
+            {dishPictures.map((image) => (
+              <div className={styles.card} key={image.id}>
+                {image.id % 2 == 0 ? (
+                  <img
+                    src={image.url}
+                    alt="images"
+                    className={styles.imgContainerOpacity}
+                  />
+                ) : (
+                  <img
+                    src={image.url}
+                    alt="images"
+                    className={styles.imgContainer}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </ContentWrapper>
   );

@@ -4,14 +4,11 @@ import { NavLink } from "react-router-dom";
 
 export function MainMenu() {
   return (
-    <ul className={styles.mainMenu}>
-      {MENUOPTIONS.map((option) => {
-        return (
-          <li key={option.path}>
-            <NavLink to={option.path}>{option.optionName}</NavLink>
-          </li>
-        );
-      })}
-    </ul>
+    <div className={styles.mainMenu}>
+      <NavLink to={"/przepisy/sniadanie"}>zacznij dobrze dzień</NavLink>
+      <NavLink to={"/o-stronie"}>coś na ząb</NavLink>
+      <NavLink to={"/o-stronie"}>obiaaaad</NavLink>
+      <NavLink to={"/przepisy/deser"}>sama słodycz</NavLink>
+    </div>
   );
 }

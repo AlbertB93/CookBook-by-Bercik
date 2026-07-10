@@ -20,20 +20,12 @@ export function RecipeAllRecipes({
       <div className={styles.recipeAllRecipes}>
         <h3>{title}</h3>
         <img src={imgUrl} alt="FOTKA" className={styles.imgContainer} />
-        <p>Wartości odżywcze:</p>
         <p className={styles.values}>
           {kcal} kcal. T: {fats}g. W: {carbons}g. B: {proteins} g.
         </p>
         <div className={styles.buttons}>
           <ButtonSmall>
             <NavLink to={`/przepis/${id}`}>Pokaż przepis</NavLink>
-          </ButtonSmall>
-          <ButtonSmall
-            onClick={() =>
-              addToDailyMenu(id, title, imgUrl, kcal, fats, carbons, proteins)
-            }
-          >
-            Dodaj
           </ButtonSmall>
         </div>
       </div>

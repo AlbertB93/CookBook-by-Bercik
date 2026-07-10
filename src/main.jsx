@@ -12,7 +12,6 @@ import { SingleRecipeLoader } from "./api/SingleRecipeLoader.js";
 import { GroupOfRecipesLoader } from "./api/GroupOfRecipesLoader.js";
 import { GroupOfCaloriesLoader } from "./api/GroupOfCaloriesLoader.js";
 import { AboutPage } from "./views/AboutPage/AboutPage.jsx";
-import { CreateMeal } from "./views/CreateMeal/CreateMeal.jsx";
 
 const router = createBrowserRouter([
   {
@@ -48,14 +47,10 @@ const router = createBrowserRouter([
         path: "/o-stronie",
         element: <AboutPage />,
       },
-      {
-        path: "/kompozycja",
-        element: <CreateMeal />,
-      },
     ],
   },
 ]);
 
 createRoot(document.getElementById("root")).render(
-  <RouterProvider router={router}></RouterProvider>
+  <RouterProvider router={router}></RouterProvider>,
 );

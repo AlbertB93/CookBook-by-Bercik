@@ -249,8 +249,8 @@
     {
       "id": 9,
       "title": "Sałatka z surimi",
-      "group": "supper",
-      "groupB": "salad",
+      "group": "salad",
+      "groupB": "supper",
       "imageState": "/recipes/9_sałatka z surimi.jpg",
       "kcal": 318,
       "fats": 14,
