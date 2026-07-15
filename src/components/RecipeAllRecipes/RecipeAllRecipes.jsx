@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import { ButtonSmall } from "../ButtonSmall/ButtonSmall";
 import styles from "./RecipeAllRecipes.module.css";
 import { ListOfMealsStateContext } from "../../contexts/ListOfMealsStateContext.js";
 import { useContext } from "react";
@@ -17,18 +16,15 @@ export function RecipeAllRecipes({
 
   return (
     <ListOfMealsStateContext.Provider value={[listOfMeals, addToDailyMenu]}>
-      <div className={styles.recipeAllRecipes}>
-        <h3>{title}</h3>
-        <img src={imgUrl} alt="FOTKA" className={styles.imgContainer} />
-        <p className={styles.values}>
-          {kcal} kcal. T: {fats}g. W: {carbons}g. B: {proteins} g.
-        </p>
-        <div className={styles.buttons}>
-          <ButtonSmall>
-            <NavLink to={`/przepis/${id}`}>Pokaż przepis</NavLink>
-          </ButtonSmall>
+      <NavLink to={`/przepis/${id}`}>
+        <div className={styles.recipeAllRecipes}>
+          <h3>{title}</h3>
+          <img src={imgUrl} alt="FOTKA" className={styles.imgContainer} />
+          <p className={styles.values}>
+            {kcal} kcal. T: {fats}g. W: {carbons}g. B: {proteins} g.
+          </p>
         </div>
-      </div>
+      </NavLink>
     </ListOfMealsStateContext.Provider>
   );
 }

@@ -8,6 +8,7 @@
   /* CSS rules specific for extra small screens */
   .contentWrapper {
     display: flex;
+    flex-direction: column;
     width: 98%;
   }
 }

@@ -60,10 +60,9 @@
 @media only screen and (max-width: 576px) {
   /* CSS rules specific for extra small screens */
   .mainPage {
-    flex-direction: column;
-    margin: 0;
-    margin-top: 12px;
-    gap: 4px;
-    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    height: 80vh;
   }
 }

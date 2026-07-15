@@ -10,33 +10,33 @@ export function SingleRecipe() {
   return (
     <ContentWrapper>
       <div className={styles.singleRecipe}>
-        <div className={styles.topBar}>
-          <p className={styles.title}> {activeMeal.title}</p>
-          <ButtonSimple>
-            <NavLink to={`/przepisy`}>Powrót</NavLink>
-          </ButtonSimple>
-        </div>
+        <ButtonSimple>
+          <NavLink to={`/przepisy`}>Powrót</NavLink>
+        </ButtonSimple>
         <div className={styles.photoIngredientsValuesWrapper}>
           <div className={styles.imgContainerMeal}>
+            <p className={styles.title}> {activeMeal.title}</p>
             <img
               src={activeMeal.imageState}
               alt="Zdjęcie"
               className={styles.logoImgMeal}
             />
+            <div className={styles.values}>
+              <p className={styles.value}> {activeMeal.kcal} kcal </p>
+              <p className={styles.value}>Tłuszcze: {activeMeal.fats} g.</p>
+              <p className={styles.value}>
+                Węglowodany: {activeMeal.carbons} g.
+              </p>
+              <p className={styles.value}>Białka: {activeMeal.proteins} g.</p>
+            </div>
           </div>
+
           <ul className={styles.ingredients}>
-            Składniki:
+            <p>Składniki:</p>
             {activeMeal.essentialIngredients.map((ingredient) => (
               <li key={Math.random()}> {ingredient}</li>
             ))}
           </ul>
-          <div className={styles.values}>
-            Wartości odżywcze:
-            <p className={styles.value}> {activeMeal.kcal} kcal</p>
-            <p className={styles.value}>Tłuszcze: {activeMeal.fats} g.</p>
-            <p className={styles.value}>Węglowodany: {activeMeal.carbons} g.</p>
-            <p className={styles.value}>Białka: {activeMeal.proteins} g.</p>
-          </div>
         </div>
         <div className={styles.howToCook}>
           <p>Przygotowanie:</p>

@@ -10,6 +10,7 @@
   /* CSS rules specific for extra small screens */
   .title {
     font-size: 0.8rem;
+    text-align: center;
     width: 100%; /* Adjust layout for full-width on small screens */
   }
 }

@@ -36,7 +36,37 @@
 @media only screen and (max-width: 576px) {
   /* CSS rules specific for extra small screens */
   .topBar {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 10vh;
     margin: 0;
+    margin-bottom: 10px;
     width: 100%;
+  }
+  .topBarCenter {
+    order: 0;
+    width: 80%;
+  }
+
+  .corner {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8em;
+    opacity: 0.8;
+    order: 1;
+    padding: 0 8px;
+  }
+
+  .imgContainer {
+    align-items: center;
+    background-color: var(--color-main);
+    border: solid 2px silver;
+    border-radius: 60px;
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    overflow: hidden;
+    width: 80px;
   }
 }

@@ -1,9 +1,19 @@
 .buttonSimple {
   background: none;
-  border: solid 1px var(--color-border-gold);
+  border: solid 1px var(--color-border);
+  border-radius: 8px;
   box-shadow: 1px -1px 1px var(--color-border);
   color: var(--color-text-main);
   cursor: pointer;
   height: 30px;
-  padding: 4px;
+  padding: 6px;
+  position: absolute;
+  right: 374px;
+}
+
+@media only screen and (max-width: 576px) {
+  .buttonSimple {
+    right: 34px;
+    top: 88px;
+  }
 }
