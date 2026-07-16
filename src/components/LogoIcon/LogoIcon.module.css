@@ -5,10 +5,25 @@
   width: 72px;
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 480px) {
   /* CSS rules specific for extra small screens */
   .logoIcon {
     height: 40px;
     width: 40px;
   }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .logoIcon {
+    height: 58px;
+    width: 58px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* CSS rules specific for extra small screens */
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  /* CSS rules specific for extra small screens */
 }

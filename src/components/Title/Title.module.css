@@ -6,11 +6,34 @@
   text-transform: uppercase;
 }
 
-@media only screen and (max-width: 576px) {
-  /* CSS rules specific for extra small screens */
+@media only screen and (max-width: 480px) {
   .title {
     font-size: 0.8rem;
     text-align: center;
-    width: 100%; /* Adjust layout for full-width on small screens */
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .title {
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1280px) {
+  .title {
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
   }
 }

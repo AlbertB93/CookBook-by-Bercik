@@ -57,12 +57,12 @@
   }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: var(--breakpoint-lg)) {
   /* CSS rules specific for extra small screens */
   .mainPage {
     align-items: center;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     height: 80vh;
   }
 }
